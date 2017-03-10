@@ -23,7 +23,7 @@ header {
 	padding: 20px;
 }
 
-.card-content {
+.form-card-content {
 	display: block;
 	margin: 5px auto;
 	border: none;
@@ -38,40 +38,16 @@ header {
 	transition: height .1s linear;
 }
 
-.card-content:focus {
+.form-card-content:focus {
 	height: 120px;
 	box-shadow: 0 0 3px 2px rgba(0,150,200, 1);
 }
 
-.card-button {
+.form-card-button {
 	display: block;
 	background-color: rgba(70,20,170,.25);
 	border: none;
 	margin: 15px auto 0;
 	font-size: 1em;
 	padding: 5px 15px;
-}
-
-.cards-container {
-	display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-
-.card {
-	margin: 32px 16px;
-	min-width: 272px;
-  	padding: 16px;
-	line-height: 1.5;
-	position: relative;
-	font-size: 2em;
-	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
-
-	flex-grow: 1;
-	word-wrap: break-word;
-    text-align: left;
-    flex-basis: 100px;
 }

@@ -4,6 +4,7 @@
 	<title>Flex Cards</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/cards.css">
 </head>
 <body>
 	
@@ -13,29 +14,24 @@
 	</header>
 
 	<section class="container form">
-		<textarea class="card-content" placeholder="Digite aqui"></textarea>
-		<input type="submit" class="card-button" value="Adicionar">
+		<textarea class="form-card-content" placeholder="Digite aqui"></textarea>
+		<input type="submit" class="form-card-button" value="Adicionar">
 	</section>
 
 	<section class="container cards-container">
+		
 		<div class="card" style="background-color: yellow">
 			<p>Cartão Teste 1</p>
-		</div>
-
-		<div class="card" style="background-color: green">
-			<p>Cartão Teste 2</p>
-		</div>
-
-		<div class="card" style="background-color: red">
-			<p>Cartão Teste 3</p>
-		</div>
-
-		<div class="card" style="background-color: blue">
-			<p>Cartão Teste 4</p>
-		</div>
-
-		<div class="card" style="background-color: purple">
-			<p>Cartão Teste 5</p>
+			<div class="card-colors-options">
+				<ul>
+					<li style="background-color: white"><a href="#">Excluir</a></li>
+					<li style="background-color: white"><a href="#">Editar</a></li>
+					<li style="background-color: yellow"><a href="#">Amarelo</a></li>
+					<li style="background-color: red"><a href="#">Vermelho</a></li>
+					<li style="background-color: blue"><a href="#">Azul</a></li>
+					<li style="background-color: green"><a href="#">Verde</a></li>
+				</ul>
+			</div>
 		</div>
 
 		

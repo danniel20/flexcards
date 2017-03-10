@@ -1,0 +1,31 @@
+.cards-container {
+	display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.card {
+	margin: 32px 16px;
+	min-width: 272px;
+  	padding: 16px;
+	line-height: 1.5;
+	position: relative;
+	font-size: 2em;
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+
+	flex-grow: 1;
+	word-wrap: break-word;
+    text-align: left;
+    flex-basis: 100px;
+}
+
+.card-colors-options > ul li {
+	display: inline-block;
+}
+
+.card-colors-options a {
+	text-decoration: none;
+}

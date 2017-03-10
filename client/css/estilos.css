@@ -1,0 +1,77 @@
+body {
+	background-color: #E8E8E8;
+}
+
+.container {
+	padding: 0 10%;
+}
+
+header {
+	background-color: #0082C7;
+	height: 55px;
+}
+
+.logo {
+	font-size: 2em;
+	font-family: "Verdana", "Helvetica", sans-serif;
+	color: rgba(255,255,255,.7);
+	line-height: 55px;
+}
+
+.form {
+	background-color: rgba(0,0,0,.15);
+	padding: 20px;
+}
+
+.card-content {
+	display: block;
+	margin: 5px auto;
+	border: none;
+	width: 585px;
+	height: 40px;
+	line-height: 1.5;
+	padding: 0 5px;
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	font-size: 1em;
+	overflow: auto;
+	outline: none;
+	transition: height .1s linear;
+}
+
+.card-content:focus {
+	height: 120px;
+	box-shadow: 0 0 3px 2px rgba(0,150,200, 1);
+}
+
+.card-button {
+	display: block;
+	background-color: rgba(70,20,170,.25);
+	border: none;
+	margin: 15px auto 0;
+	font-size: 1em;
+	padding: 5px 15px;
+}
+
+.cards-container {
+	display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.card {
+	margin: 32px 16px;
+	min-width: 272px;
+  	padding: 16px;
+	line-height: 1.5;
+	position: relative;
+	font-size: 2em;
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+
+	flex-grow: 1;
+	word-wrap: break-word;
+    text-align: left;
+    flex-basis: 100px;
+}

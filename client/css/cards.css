@@ -10,8 +10,8 @@
 .card {
 	margin: 32px 16px;
 	min-width: 272px;
-  	padding: 16px;
-	line-height: 1.5;
+  	padding: 0;
+	
 	position: relative;
 	font-size: 2em;
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
@@ -22,10 +22,52 @@
     flex-basis: 100px;
 }
 
-.card-colors-options > ul li {
-	display: inline-block;
+.card-colors-options {
+	position: absolute;
+	top: -16px;
+	left: 0;
+	z-index: 1;
+	font-size: 0;
 }
 
-.card-colors-options a {
-	text-decoration: none;
+.card-option {
+	display: inline-block;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	outline: none;
+	border-radius: 50%;
+	border: 2px solid rgba(0,0,0,0.5);
+}
+
+.card-delete{
+
+}
+
+.card-edit {
+
+}
+
+.card-content {
+	overflow: hidden;
+	padding: 16px;
+	line-height: 1.5;
+}
+
+[data-color="first"] {
+	background-color: #45AAEE; /*Azul*/
+}
+
+[data-color="second"]  {
+	background-color: #FF1010; /*Vermelho*/ 
+}
+
+[data-color="third"]  {
+	background-color: #76EF40; /*Verde*/
+}
+
+[data-color="fourth"]  {
+	background-color: #EBEF40; /*Amarelo*/
 }

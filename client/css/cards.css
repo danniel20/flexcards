@@ -10,7 +10,7 @@
 .card {
 	margin: 32px 16px;
 	min-width: 272px;
-  	padding: 0;
+  	padding: 16px;
 	
 	position: relative;
 	font-size: 2em;
@@ -26,14 +26,21 @@
 
 .card:hover {
 	transform: scale(1.1);
+	z-index: 1;
 }
 
-.card-colors-options {
+.card .card-colors-options {
 	position: absolute;
 	top: -16px;
 	left: -16px;
 	z-index: 1;
 	font-size: 0;
+	opacity: 0;
+	transition: opacity .2s ease-in;
+}
+
+.card:hover .card-colors-options {
+	opacity: 1;
 }
 
 .card-option {
@@ -82,7 +89,6 @@
 
 .card-content {
 	overflow: hidden;
-	padding: 16px;
 	line-height: 1.5;
 }
 

@@ -15,11 +15,17 @@
 	position: relative;
 	font-size: 2em;
 	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	transition: transform .2s ease-in;
 
 	flex-grow: 1;
 	word-wrap: break-word;
     text-align: left;
     flex-basis: 100px;
+}
+
+.card:hover {
+	transform: scale(1.1);
 }
 
 .card-colors-options {
@@ -32,7 +38,6 @@
 
 .card-option {
 	display: inline-block;
-	text-indent: -9999px;
 	overflow: hidden;
 	width: 32px;
 	height: 32px;
@@ -46,10 +51,33 @@
 
 .card-delete{
 	margin-right: 10px;
+	position: relative;
+}
+
+.card-delete:before {
+	position: absolute;
+  	font-family: 'FontAwesome';
+   	top: 2px;
+  	left: 5px;
+  	content: "\f00d";
+  	font-size: 22px;
+  	text-align: center;
+  	color: grey;
 }
 
 .card-edit {
+	position: relative;
+}
 
+.card-edit:before {
+	position: absolute;
+  	font-family: 'FontAwesome';
+   	top: 2px;
+  	left: 5px;
+  	content: "\f040";
+  	font-size: 22px;
+  	text-align: center;
+  	color: grey;
 }
 
 .card-content {
@@ -58,18 +86,18 @@
 	line-height: 1.5;
 }
 
-[data-color="first"] {
+[data-color="blue"] {
 	background-color: #45AAEE; /*Azul*/
 }
 
-[data-color="second"]  {
+[data-color="red"]  {
 	background-color: #FF1010; /*Vermelho*/ 
 }
 
-[data-color="third"]  {
+[data-color="green"]  {
 	background-color: #76EF40; /*Verde*/
 }
 
-[data-color="fourth"]  {
+[data-color="yellow"]  {
 	background-color: #EBEF40; /*Amarelo*/
 }

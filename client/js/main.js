@@ -7,9 +7,11 @@ $(function(){
 
 		var content = $(".form-card-content").val();
 		
-		var novoCard = criaCard("Cartão XXX");
+		var novoCard = criaCard(content);
 
 		$(".cards-container").prepend(novoCard);
+
+		$(".form-card-content").val("");
 	});
 
 
@@ -77,7 +79,6 @@ $(function(){
 		var $conteudo = $("<p>");
 		$conteudo.addClass("card-content");
 		$conteudo.text(texto);
-		$conteudo.blur(removeFocus);
 
 		return $conteudo;
 	}
@@ -100,23 +101,16 @@ $(function(){
 		var $content = $card.find(".card-content");
 
 		if(editable){
-			removeFocus();
+			editable = false;
+		    $content.attr("contenteditable", false);
+		    $content.blur();
+		    $(this).removeClass("isActive");
 		}
 		else{
 			editable = true;
 			$content.attr("contenteditable", true);
 			$content.focus();
 		}
-	}
-
-	function removeFocus(){
-
-		var $card = $(this).parent();
-		$cardEdit = $card.find(".card-edit");
-		$cardEdit.removeClass("isActive");
-
-		editable = false;
-		$(".card-content").attr("contenteditable", false);
 	}
 
 	function selectColor(){
@@ -127,5 +121,12 @@ $(function(){
 		$card.attr("data-color", colorValue);
 
 		$(this).addClass("isActive");
+
+		if(editable){
+			var $content = $card.find(".card-content");
+			editable = false;
+		    $content.attr("contenteditable", false);
+		    $content.blur();
+		}
 	}
 });

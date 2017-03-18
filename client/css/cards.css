@@ -21,7 +21,6 @@
 	flex-grow: 1;
 	word-wrap: break-word;
     text-align: left;
-    flex-basis: 100px;
 }
 
 .card:hover {

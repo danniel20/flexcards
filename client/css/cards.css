@@ -19,6 +19,7 @@
 	transition: transform .2s ease-in;
 
 	flex-grow: 1;
+	flex-basis: 100px;
 	word-wrap: break-word;
     text-align: left;
 }

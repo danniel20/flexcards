@@ -2,11 +2,18 @@ $(function(){
 
 	var editable = false;
 
-	var novoCard = criaCard();
+	$(".form-card-button").on("click", function(event){
+		event.preventDefault();
 
-	$(".cards-container").append(novoCard);
+		var content = $(".form-card-content").val();
+		
+		var novoCard = criaCard("Cartão XXX");
 
-	function criaCard(){
+		$(".cards-container").prepend(novoCard);
+	});
+
+
+	function criaCard(texto){
 
 		var $card = $("<div>");
 		$card.addClass("card");
@@ -16,7 +23,7 @@ $(function(){
 		var $opcoesDoCard = criaOpcoesDoCard();
 		$card.append($opcoesDoCard);
 
-		var $conteudo = criaConteudo("Cartão Teste X");
+		var $conteudo = criaConteudo(texto);
 		$card.append($conteudo);
 
 		return $card;
